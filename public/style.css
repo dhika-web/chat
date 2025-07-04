@@ -1,0 +1,175 @@
+:root {
+    --primary-color: #007bff;
+    --user-message-bg: #e9ecef;
+    --admin-message-bg: #007bff;
+    --background-light: #f8f9fa;
+    --border-color: #dee2e6;
+    --text-dark: #343a40;
+    --text-light: #ffffff;
+}
+body { 
+    margin: 0; 
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+}
+#app-container {
+    display: flex;
+    height: 100vh;
+}
+#user-list-container { 
+    width: 280px; 
+    border-right: 1px solid var(--border-color); 
+    background-color: #ffffff; 
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+#user-list-container h2 { 
+    padding: 1rem;
+    margin: 0; 
+    font-size: 1.2rem; 
+    border-bottom: 1px solid var(--border-color);
+    color: var(--primary-color);
+}
+#user-list { 
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+.user-list-item {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.user-list-item:hover {
+    background-color: var(--background-light);
+}
+.user-list-item.active {
+    background-color: #e9ecef;
+    font-weight: 600;
+}
+#chat-view {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f2f5;
+}
+#chat-header {
+    padding: 1rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+}
+#chat-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+#messages-container { 
+    flex-grow: 1; 
+    overflow-y: auto;
+    padding: 1rem;
+}
+#messages { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+}
+#messages > li { 
+    display: flex;
+    margin-bottom: 0.75rem;
+}
+.message-bubble {
+    padding: 0.6rem 1rem;
+    border-radius: 18px;
+    max-width: 70%;
+    word-wrap: break-word;
+    line-height: 1.4;
+}
+.message-sent {
+    justify-content: flex-end; 
+}
+.message-sent .message-bubble {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-bottom-right-radius: 4px;
+}
+.message-received {
+    justify-content: flex-start; 
+}
+.message-received .message-bubble {
+    background-color: #ffffff;
+    color: var(--text-dark);
+    border-bottom-left-radius: 4px;
+    border: 1px solid #e9ecef;
+}
+#form-container {
+    padding: 1rem;
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-color);
+}
+#form { 
+    display: flex;
+}
+#input { 
+    border: 1px solid var(--border-color); 
+    padding: 0 1.2rem; 
+    flex-grow: 1; 
+    border-radius: 2rem; 
+    margin-right: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.2s;
+    background-color: #f0f2f5;
+}
+#input:focus { 
+    outline: none; 
+    border-color: var(--primary-color);
+    background-color: #fff;
+}
+#form > button { 
+    background: var(--primary-color); 
+    border: none; 
+    padding: 0 1.5rem; 
+    border-radius: 2rem; 
+    outline: none; 
+    color: var(--text-light);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#form > button:hover {
+    background-color: #0056b3;
+}
+
+/* TAMBAHKAN DI AKHIR file style.css */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.admin-header h2 {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.admin-header a {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.history-page .container { max-width: 800px; margin: 2rem auto; padding: 2rem; background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.history-page header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+.history-page header h1 { margin: 0; }
+.history-page header a { font-size: 0.9rem; }
+#search-form { display: flex; margin-bottom: 2rem; }
+#search-input { flex-grow: 1; margin-right: 0.5rem; }
+.conversation { margin-bottom: 2rem; border: 1px solid #eee; padding: 1rem; border-radius: 5px; }
+.conversation h3 { margin-top: 0; }
+.conversation ul { padding-left: 20px; }
+.conversation li { margin-bottom: 0.5rem; }
+.timestamp { font-size: 0.8rem; color: #6c757d; margin-left: 10px; }

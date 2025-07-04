@@ -1,1 +1,12 @@
-node_modules
+# Folder library Node.js
+node_modules/
+
+# File environment (berisi password, dll)
+.env
+
+# File database
+*.db
+
+# File sistem operasi
+.DS_Store
+Thumbs.db
